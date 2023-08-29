@@ -1,0 +1,14 @@
+name: web-app
+pod:
+  name: web-application
+  image: mksvk/chandigarh
+  containerPort: 80
+  imagePullPolicy: IfNotPresent
+
+service:
+  selector: web-app
+  type: NodePort
+  port: 80
+  targetPort: 80
+  
+

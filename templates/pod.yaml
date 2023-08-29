@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ .Values.name }}
+  labels: 
+    app: {{ .Values.name }}
+spec:
+  containers:
+  - name: {{ .Values.pod.name }}
+    image: {{ .Values.pod.image }}
+    ports:
+    - containerPort: {{ .Values.pod.containerPort }}
+    imagePullPolicy: {{ .Values.pod.imagePullPolicy }}
+        
